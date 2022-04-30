@@ -3,6 +3,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+//Algorithm and solution discussed in detail here - https://www.youtube.com/watch?v=O4H5h57mYSU
 class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
