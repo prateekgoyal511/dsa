@@ -1,8 +1,7 @@
-// { Driver Code Starts
+package arrays;// { Driver Code Starts
 // Initial Template for Java
 
 import java.io.*;
-import java.util.*;
 
 class MissingNumberMain {
     public static void main(String[] args) throws IOException {
