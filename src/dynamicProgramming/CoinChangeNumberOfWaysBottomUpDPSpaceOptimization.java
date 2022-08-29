@@ -34,8 +34,7 @@ class CoinChangeNumberOfWaysBottomUpDPSpaceOptimizationSolution {
         //for row i-1. It'll store forming sums j by using first i-1 coins
         long[] prev = new long[sum+1];
 
-        //Declare a 1D array curr.
-        long[] curr = new long[sum+1];
+
 
         //Initially, prev corresponds to N=0 => no coin. Therefore, forming sum is impossible
         //Hence, filling prev row with 0
@@ -50,6 +49,8 @@ class CoinChangeNumberOfWaysBottomUpDPSpaceOptimizationSolution {
         //That means, we'll be filling values for forming j's using first i coins
         int i;
         for(i=1; i<=N; i++) {
+            //Declare a 1D array curr.
+            long[] curr = new long[sum+1];
             //First element corresponds to sum = 0. Sum = 0 with at least one coin means
             //we have 1 way. Don't pick any coin.
             curr[0] = 1;
@@ -70,19 +71,9 @@ class CoinChangeNumberOfWaysBottomUpDPSpaceOptimizationSolution {
                 curr[j] = nowsIncludingLastElement + nowsExcludingLastElement;
             }
 
-            //Now, we have curr all filled. Now, we don't need prev. We can copy this
-            //curr into prev array so that it can serve as prev for next iteration
-            copyCurrentToPrevious(curr, prev, sum+1);
+            prev = curr;
         }
 
         return prev[sum];
-    }
-
-    private static void copyCurrentToPrevious(long[] current, long[] previous, int maxCols) {
-        int j;
-
-        for(j=0; j<maxCols; j++) {
-            previous[j] = current[j];
-        }
     }
 }
