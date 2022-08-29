@@ -50,8 +50,6 @@ class MinimumCoinsBottomUpDPSolution{
         int[] coinUsed = new int[N+1];
         coinUsed[0] = -1;
 
-        //Base conditions - For all denominations, we need only 1 coin - the denomination
-        //coin
         int i;
         int denominationVal;
 
