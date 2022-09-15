@@ -54,7 +54,6 @@ class MinJumpsTopDownDPSolution{
         int minJumpsj;
         int candidateMinJumps;
         int minJumpsSoFar = Integer.MAX_VALUE;
-        int minJumpsi = -1;
         for(j=i-1; j>=0; j--) {
             //Minimum number of jumps required to reach j
             minJumpsj = minJumpsUtil(arr, j, calculatedResultsMap);
