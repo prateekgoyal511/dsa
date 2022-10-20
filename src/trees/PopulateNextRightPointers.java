@@ -28,9 +28,6 @@ public class PopulateNextRightPointers {
             //This pointer will traverse across a level
             TreeLinkNode currentNodeInLevel;
 
-            TreeLinkNode firstChildNode;
-            TreeLinkNode secondChildNode;
-
             firstNodeInLevel = root;
 
             //This will go on till there is at least one node in a level. We'll try to connect children of this level with each other.
