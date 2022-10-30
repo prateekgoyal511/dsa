@@ -87,4 +87,23 @@ class PathToANodeInATree {
         return false;
     }
 	*/
+
+    //ANOTHER VERY SIMPLE WAY OF GETTING PATH
+
+    /*
+        //Finding the path of target node from root node
+    public boolean findPath(TreeNode node, TreeNode target)
+    {
+        if (node == null)
+            return false;
+
+        if (node == target || findPath(node.left, target)
+            || findPath(node.right, target)) {
+            path.add(node);
+            return true;
+        }
+
+        return false;
+    }
+     */
 }
