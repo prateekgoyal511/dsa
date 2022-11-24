@@ -23,6 +23,7 @@ class Node {
 }
 
 
+
 class CloneGraphDFS {
 
     public Node cloneGraph(Node node) {
@@ -53,3 +54,8 @@ class CloneGraphDFS {
         return cloneNode;
     }
 }
+
+
+//VERY SIMILAR LOGIC FOR CLONING BY BFS. In BFS, we visit a node while adding it to the queue. So, while doing that, clone it and put in map
+//Then, for all its neighbours, we want to create edges for clone's neighbours as well. If it is an unvisited neighbour => clone neighbour
+//add it to adjacency list of clone and put in map. If it is visited => just add directly.
