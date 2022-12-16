@@ -22,6 +22,8 @@ public class CombinationSumBacktracking {
         // Also, passing in can_be_picked_start. This variable maintains that our solution is being built
         // starting with this index. We need it because otherwise [2,2,3] [2,3,2] and [3,2,2] all were
         // coming.
+        // We can also think as - we either decide to include the first element or not. If we decide to include => great. We can keep on including more.
+        // However, once we have decided that we are excluding this, then, further in recursion, also, we should not be able to include it.
         backtrack(a, b, temp, 0);
         return result;
     }
