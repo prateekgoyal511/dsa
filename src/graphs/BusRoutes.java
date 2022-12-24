@@ -3,7 +3,7 @@ package graphs;
 import java.util.*;
 //Problem - https://leetcode.com/problems/bus-routes/description/
 //The solution gives TLE for some of the cases.
-class Solution {
+class BusRoutes {
     public int numBusesToDestination(int[][] routes, int source, int target) {
         //This map is supposed to hold graph details. Each key is a bus no => index in routes array. Value against that key is a list of buses. It indicates,
         //if I am on a bus1, what all buses can I get to next.
